@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Form</title>
+</head>
+
+<p id="show"></p>
+<body>
+  <!-- <form action="" name="myform" onsubmit="">
+    <input type="text" name="fname" placeholder="Enter first name" id=""><br>
+    <input type="text" name="lname" placeholder="Enter last name" id=""><br>
+    <input type="button" onclick="fullname()" name="submit" value="SUBMIT">
+  </form>
+
+  <script>
+   function fullname(){
+    // let fname = document.forms["myform"]['fname'].value;
+    let fname = document.myform.fname.value;
+    let lname = document.myform.lname.value;
+    let full = fname + " " + lname;
+    document.getElementById("show").innerHTML= full
+   }
+  </script> -->
+
+  <script>
+    let text = "rahim5@gmail.com";
+
+    let result = text.search(/[(a-z0-9)]+[]/g)
+    document.getElementById("show").innerHTML= result
+  </script>
+
+</body>
+</html>

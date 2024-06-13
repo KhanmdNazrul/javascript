@@ -1,0 +1,1 @@
+alert("Hello World, Alert From Js Section")  //it's extension will be .js

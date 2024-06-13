@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    
+    <form action="" name="lForm">
+        <fieldset>
+            <legend>LOGin Form</legend>
+
+            <input type="text" name="Email" placeholder="Enter Your Email" id=""><br>
+            <input type="password" name="pwd" placeholder="Enter Password" id=""><br><br>
+            <button type="button" onclick="Abdullah()" value="Register">Register</button><br>
+        </fieldset>
+    </form>
+           
+    <script>
+        class Mailclass{
+            constructor(nazrul,passkey){
+                this.khan = nazrul;
+                this.pswd = passkey;
+            }
+
+            Mohiuddin(){
+                let pattern = /[A-z0-9_.]+@[A-z]+\.[A-z]/;
+                let ppattern = /[length<6]/
+                if(this.khan.search(pattern) == -1){
+                  return "Your Email is incorrect";
+                 }else if(this.pswd.search(ppattern)==-1){
+                return "Enter a Valid Password"
+                }else{
+                    return "Success";
+                     }
+                }
+            }
+        
+
+     function Abdullah(){
+            let mail = document.lForm.Email.value;
+            let pass = document.lForm.pwd.value;
+            let valid = new Mailclass(mail,pass);
+            
+            valid.Mohiuddin()
+
+             document.write(valid.Mohiuddin());
+        }
+        
+       
+    </script>
+</body>
+</html>

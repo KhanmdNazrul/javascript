@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="" name="myForm">
+    <fieldset>
+        <legend>Email Validation</legend>
+
+    Email: <input type="text" name="Email" placeholder="Enter Email" id=""><br>
+    Confirm Email: <input type="text" name="Remail" placeholder="Re-enter email" id=""><br>
+    Password: <input type="password" name="pass" placeholder="Enter Password" id=""><br>
+    <button onclick="myFunction()" type="submit">Login</button>
+    </fieldset>
+
+    <script>
+        function myFunction(){
+            let email1 = document.myForm.Email.value;
+            let email2 = document.myForm.Remail.value;
+            let pass = document.myForm.pass.value;
+            let pattern = /[A-z0-9]+@[A-z]+\.[A-z]/
+            let result = email1.search(pattern);
+
+            if( result == -1){
+                alert("Not Valid")
+            }else if(email1!=email2){
+                alert("Email is not Matched")
+            }else if(pass.length<7){
+                alert("Password invalid")
+            }
+            else{alert("Success")}
+        }
+    </script>
+   </form>
+</body>
+</html>

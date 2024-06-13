@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="Show"></p>
+    <script>
+
+   // const mohi =  prompt( " Enter Name " ,  " ");
+
+    //  const welcome = () => " welcome " + mohi;
+   
+        const welcome = (y) => {
+            const mohi =  prompt( " Enter Name " ,  " ");
+            y = mohi;
+            return "Welcome " + y;
+        }
+
+
+     document.getElementById("Show").innerHTML = welcome()
+
+     
+    </script>
+</body>
+</html>

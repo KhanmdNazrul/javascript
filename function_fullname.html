@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   
+    <script>
+        function fullName(){
+          let first =   prompt("Enter First Name", "")
+           let last =  prompt("Enter Last Name", "")
+            let full = first + " " + last;
+           // alert("Your full Name: " + full);
+           document.getElementById("box").innerHTML = full;
+        }
+    </script>
+   
+    <button onclick="fullName()">Click Here</button>
+    <div id="box"> 
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm"> 
+        <fieldset style="width: fit-content;">
+        Name: <input type="text" name="Name" placeholder="Enter Name" id=""><br>
+        Contact: <input type="text" name="Contact" placeholder="Enter Phone Number" id=""><br>
+        Remarks: <br> <textarea name="Remarks" placeholder="Place Comment Here" id=""></textarea><br>
+        Gender:  &nbsp Male <input type="radio" name="Gender" value="Male" id=""> &nbsp Female <input type="radio" value="Female" name="Gender" id=""><br>
+        Courses: <br>
+        <input type="checkbox" value="NT"  class="courses" id="">NT <br>
+        <input type="checkbox"  value="IAD" class="courses" id=""> IAD <br>
+        <input type="checkbox"  value="DDD" class="courses" id="">DDD <br>
+        <input type="checkbox"   value="ESAD" class="courses" id="">ESAD <br>
+        Location: <select name="Location" id="">
+            <option value="">Select One</option>
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+           <option value="Mirpur">Mirpur</option>
+        </select><br><br>
+        <button type="submit" onclick=" myFunction()">Submit</button>
+    </fieldset>
+    </form>
+
+    <script>
+        function myFunction(){
+            let name = document.myForm.Name.value;
+           // alert(name)
+           let contact =  document.myForm.Contact.value;
+           let remark =  document.myForm.Remarks.value;
+           let gender = document.myForm.Gender.value;
+           let courses = document.getElementsByClassName("courses")
+           let data = ""
+           for(let i = 0; i<courses.length; i++){
+            if(courses[i].checked){
+                data += courses[i].value + ", ";
+            }
+           }
+
+           let location = document.myForm.Location.value;
+
+
+           let output="";
+           output += "Name: " + name + "<br>";
+           output += "Contact: " + contact + "<br>";
+           output += "Remark: " + remark + "<br>";
+           output += "Gender: " + gender + "<br>";
+           output += "Courses: " + data + "<br>";
+           output += "Location: " + location + "<br>";
+
+
+           let mw = window.open("", "", "height=450,width=500")
+           mw.document.write(output)
+
+
+        }
+    </script>
+</body>
+</html>

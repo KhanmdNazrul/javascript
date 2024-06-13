@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="" name="myForm">
+    <fieldset>
+        <legend>Student Information Form</legend>
+        Name: <input type="text" name="Name"  placeholder="Enter Name"><br>
+        Contact: <input type="text" name="Contact"  placeholder="Enter Number"><br>
+        Comment: <br> <textarea name="Comment"  placeholder="Place Your Comment"></textarea><br> 
+        Gender: &nbsp  Male<input type="radio" name="Gender" value="Male"> Female <input type="radio" name="Gender" value="Female"><br>
+        Course:  &nbsp PHP <input type="checkbox" name="Course" value="PHP" class="course"><br>
+            Java <input type="checkbox" name="Course" value="Java" class="course"><br>
+            REACT <input type="checkbox" name="Course" value=" REACT" class="course"><br>
+            CAD <input type="checkbox" name="Course" value=" CAD" class="course"><br>
+            PYTHON <input type="checkbox" name="Course" value=" PYTHON" class="course"><br>
+        <button onclick="" type="submit">Submit</button>
+    </fieldset>
+
+    <script>
+        function myFunction(){
+          let name = document.myForm.Name.value;
+          let contact =  document.myForm.Contact.value;
+          let comment = document.myForm.Comment.value;
+          
+        }
+    </script>
+   </form>
+</body>
+</html>

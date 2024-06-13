@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Email Validation</h2>
+    <script>
+   class Validation{
+    constructor(nazrul){
+        this.khan = nazrul
+    }
+
+    Abdullah(){
+        let pattern = /[A-z0-9_.]+@[A-z]+\.[A-z]/;
+        if(this.khan.search(pattern)){
+            return "Your Email address is wrong"
+        }else{
+            return "Your Email address is Correct"
+        }
+    }
+   }
+
+   Mohiuddin(){
+    let mail = prompt("Enter YOur Email", "");
+    let valid = new Validation(mail)
+
+   }
+    document.write(valid.Abdullah())
+</script>
+
+<!-- <button onclick="myFunction()">Click</button> -->
+
+
+
+</body>
+</html>

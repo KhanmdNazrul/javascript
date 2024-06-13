@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+
+    <form action="" name="myForm">
+        Name: <input type="text" name="Fname" placeholder="Enter fname" id="">&nbsp &nbsp <input type="text" name="Lname" placeholder="Enter last Name" id=""><br>
+        Company: <br> <textarea name="Company" placeholder="Enter Company Name" id=""></textarea><br>
+        Email: <input type="text" name="Email" placeholder="Enter Your Mail" id=""><br>
+        Phone: <input type="text" name="Area" placeholder="Enter Code" id=""> <input type="text" name="Number" placeholder="Enter phone Number" id=""><br>
+        Subject: <select name="Subject" id="">
+            <option value="">Select One</option>
+            <option value="Dance">Dance</option>
+            <option value="Songs">Songs</option>
+            <option value="Food">Food</option>
+        </select><br>
+        Are You an Existing Customer? <br>
+        <input type="radio" name="Customer" id=""> Yes &nbsp &nbsp &nbsp <input type="radio" name="Customer" id=""> No <br><br>
+        <button onclick=" myFunction()" value="Register">Register</button>
+    </form>
+
+    <script>
+        function myFunction(){
+
+            let name1 = document.myForm.Fname.value;
+           let name2 = document.myForm.Lname.value;
+        //    let company = document.myForm.Company.value;
+        //    let email = document.myForm.Email.value;
+        //    let phone1 = document.myForm.Area.value;
+        //    let phone2 = document.myForm.Number.value;
+        //    let subject = document.myForm.Subject.value;
+        //    let customer = document.myForm.Customer.value;
+
+
+           let errors = [] ;
+
+           if(name1 == ""){
+            errors[errors.length] = "First name can't be empty"
+           }
+
+           if(name2 == ""){
+            errors[errors.length]="First name can't be empty"
+           }
+           if(errors.length>0){
+            let ErrorOutput = "<ul>";
+
+
+            for(let i = 0; i<errors.length; i++){
+            ErrorOutput += "<li>" + errors[i] + "</li>";
+            }
+             ErrorOutput += "</ul>";
+           
+          
+
+           // console.log(ErrorOutput)
+         document.getElementById("show").innerHTML= ErrorOutput;
+        //   let output = "";
+        //   output += "Name: " + name1 + " " + name2 + "<br>";
+        //   output += "Company: " + company + "<br>";
+        //   output += "Email: " + email + "<br>";
+        //   output += "Phone: " + phone1 + " " + phone2 + "<br>";
+        //   output += "Subject: " + subject + "<br>";
+        //   output += "Customer: " + customer + "<br>";
+
+
+        //   let mw = window.open("", "", "height=500,width=600")
+        //   mw.document.write(output);
+
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Student Information</h3>
+    <script>
+        class Student{
+          constructor  (name, dob, email, address){
+            this.stname = name;
+            this.stdob = dob;
+            this.stemail = email;
+            this.staddress = address
+        }
+        info(){
+            let details= "<br>";
+            details += "Name: " + this.stname + "<br>";
+            details += "DOB: " + this.stdob + "<br>";
+            details += "Email: " + this.stemail + "<br>";
+            details += "Address: " + this.staddress + "<br>";
+
+            return details;
+        }
+       
+       
+    }
+    const myStudent = new Student(" Md. Nazrul Islam " , " 01/06/1997 " , " mdnazrulkhandu@gmail.com ", "Demra");
+    const myStudent1 = new Student(" Md. Mohiuddin " , " 01/06/1997 " , " mdnazrulkhandu@gmail.com ", "Demra" );
+    document.write(myStudent.info() + myStudent1.info())
+   // document.write(myStudent1.info())
+   
+
+        
+    </script>
+</body>
+</html>

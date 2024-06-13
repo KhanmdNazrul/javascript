@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,td,th{
+            border: 1px solid black;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="show"></p>
+    <script>
+
+
+        const numbers = [ "mango", "banana", "apple", "pine apple"]
+
+        let i =[0];
+        let output ="<table>";
+            output += "<tr><th>SN</th><th>Name</th><th>Quantity</th></tr>";
+
+
+        while ( i <numbers.length){
+            SN = i + 1;
+            output += "<tr><td>" + SN + "</td>";
+            output += "<td>" + numbers[i] + "</td></tr>" ;
+            i++
+        }
+        output +=" </table>";
+
+        document.getElementById("show").innerHTML = output
+    </script>
+</body>
+</html>

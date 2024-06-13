@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./validation.js"></script>
+</head>
+<body>
+    <form action="" name="TdForm">
+        Email: <input type="text" name="Email" placeholder="Enter Email" id=""><br>
+<input type="button" name="submit" onclick="myFunction()" value="SUBMIT" id="">    </form><br>
+
+<script>
+    function myFunction(){
+
+  let m =  document.TdForm.Email.value;
+  let pattern = /[0-9]/
+  let result = m.search(pattern)
+ if(result == 0){  
+    alert("Number is Not Allowed")
+ }
+  else if(m ==""){
+    alert("Empty is not allowed")
+  }else{
+   let obj1 = new Validation(m);
+  // console.log(obj1)
+  obj1.validate();
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm">
+        <fieldset>
+        Email: <input type="text" name="email" placeholder="Enter email" id=""><br>
+        Confirm Email: <input type="text" name="Remail" placeholder="Re-enter email" id=""><br>
+        Password: <input type="password" placeholder="Enter valid password" name="pass" id=""><br>
+        <button onclick=" myFunction()" type="submit">Login Here</button>
+    </fieldset>
+    </form>
+
+    <script>
+        const myFunction = () => {
+           
+          
+            let email1 = document.myForm.email.value;
+            let email2 = document.myForm.Remail.value;
+            let pwd = document.myForm.pass.value;
+
+            let pattern = /[A-z0-9]+@[A-z]+\.[A-z]/
+            let result = email1.search(pattern)
+            
+           
+
+            if (email1== ""){
+                alert("Input Email")
+            }else if(result==-1){
+                alert ("Email is Not valid")
+            }
+            else if(email1!=email2){
+                alert("Email are not matched")
+            }
+            else if (pwd.length<7){
+                alert("Password should be more than 7")
+            } else{
+                alert("Welcome!")
+            }
+           
+        }
+        
+        
+    </script>
+</body>
+</html>
